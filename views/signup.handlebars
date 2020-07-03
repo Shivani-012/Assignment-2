@@ -1,0 +1,25 @@
+<div class="form-wrapper">
+<form id="signup-form" method = "POST" name = "signup" action = "https://httpbin.org/post" class="main-form"> 
+            
+    <fieldset>
+        <legend>Create Account</legend>
+        <label id="fNameLabel" for="fName">First name: </label><br>
+        <input name = "fName" required><br>
+
+        <label id="lNameLabel" for="lName">Last name: </label><br>
+        <input name = "lName" required><br>
+
+        <label id="emailLabel" for="email">Email Address: </label><br>
+        <input name = "email" type="email" required><br>
+
+        <label id="passwordLabel" for="password">Password: </label><br>
+        <input name = "password" required><br>
+
+        <label id="phoneNumLabel" for="phoneNum">Phone Number (optional): </label><br>
+        <input name = "phoneNum" pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$" placeholder="123-456-7890"><br>
+            
+        <input type = "submit" value = "Sign up">  
+    </fieldset>
+             
+</form> 
+</div>

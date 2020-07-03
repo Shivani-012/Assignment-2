@@ -1,0 +1,68 @@
+
+        <div id="content-section">
+
+            <div class="content-container">
+                <div class="img-container">
+                    <img src="img/undraw_online_groceries_a02y (1).svg">
+                </div>
+                <div class="text-wrapper">
+                    <h2>Shop</h2>
+                    <h3>Select from our 1000+ meal choices.</h3>
+                </div>
+            </div>
+            <div class="content-container">
+                <div class="img-container">
+                    <img src="img/undraw_breakfast_psiw (1).svg">
+                </div>
+                <div class="text-wrapper">
+                    <h2>Heat</h2>
+                    <h3>Delivered & cooked.</h3>
+                </div>
+            </div>
+            <div class="content-container">
+                <div class="img-container">
+                    <img src="img/undraw_special_event_4aj8 (1).svg">
+                </div>
+                <div class="text-wrapper">
+                    <h2>Eat</h2>
+                    <h3>Delicious & Nutritious.</h3>
+                </div>
+            </div>
+            <div class="content-container">
+                <div class="img-container">
+                    <img src="img/undraw_shopping_app_flsj (1).svg">
+                </div>
+                <div class="text-wrapper">
+                    <h2>Repeat</h2>
+                    <h3>Skip a week or cancel anytime.</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider-section">
+            <img class="header-img" src="img/h.jpg">
+            <div class="divider-text">No cooking. Just eating.</div>
+        </div>
+
+        <div id="top-meals-section">
+            <div class="text-wrapper">
+                <div class="meals-text">Our hottest dishes!</div>
+                <h3>You can be feasting on a meal from one of our packages any time you choose.</h4>
+            </div>
+            <div class="packageContainer">
+                <div class="packageGrid">
+                    {{#each packages}}
+                        <div class="package-wrapper">
+                            <div class="img-wrapper">
+                                <img src="img/{{this.image}}">
+                            </div>
+                            <div class="text-wrapper">
+                                <h3 id="packageTitle">{{this.title}}</h3>
+                                <h4>${{this.price}}.00</h4>
+                            </div>
+                        </div>
+                    {{/each}}
+
+                </div>
+            </div>
+        </div>

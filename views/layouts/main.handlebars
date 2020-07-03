@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{{title}}}</title>
+</head>
+<body>
+    <header>
+        <a href="/" class="icon"><img src="img/live-fit-logo.png"></a>
+        <a href="/mealPackages" class="header-link"><h3>Meal Packages</h3></a>
+        <a href="/registration" class="header-link"><h3>Register</h3></a>
+        <a href="/login" class="header-link"><h3>Log in</h3></a>
+    </header>
+
+    <div class="hero-section">
+        <img class="header-img" src="img/hero.jpg">
+        <div class="hero-text">{{{slogan}}}</div>
+    </div>
+
+    <main>
+        {{{body}}}
+    </main>
+
+    <footer>
+        <div class="footer-container">
+        <div class="footer-section">
+            <h3>Navigate</h3>
+            <a href="/"><div>Home</div></a><br>
+            <a href="/mealPackages"><div>Meal Packages</div></a><br>
+            <a href="/registration"><div>Register</div></a><br>
+            <a href="/login"><div>Log in</div></a><br>
+        </div>
+
+        <div class="footer-section">
+            <h3>Social Media</h3>
+            <a href="https://www.facebook.com/livefitfood"><img src="img/facebook-brands.svg" class="social-media-icon"></a><br>
+            <a href="https://www.instagram.com/livefitfoods/"><img src="img/instagram-brands.svg" class="social-media-icon"></a><br>
+        </div>
+
+        <div class="footer-section">
+            <h3>Sign up for our newsletter</h3>
+            <form  name = "emailSignUp" method = "POST" id="email-signup">
+                <input type="email" name="_replyto" placeholder="Enter your email"><br>
+                <input type="submit" value = "Join LiveFit"><br>
+            </form>
+        </div>
+        </div>
+
+    <div class="text-wrapper">© 2020 Shivani Singh</div>
+    </footer>
+
+</body>
+</html>
