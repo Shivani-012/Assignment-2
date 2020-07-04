@@ -1,14 +1,16 @@
 <div class="form-wrapper">
-<form id="login-form" method = "POST" name = "login" action = "https://httpbin.org/post" class="main-form"> 
+<form id="login-form" method = "POST" action = "/login" class="main-form"> 
             
     <fieldset>
         <legend>Customer Login</legend>
 
         <label id="emailLabel" for="email">Email Address: </label><br>
-        <input name = "email" type="email" required><br>
+        <input name = "email" type="email"><br>
+        <p class="error-message">{{emailError}}</p>
 
         <label id="passwordLabel" for="password">Password: </label><br>
-        <input name = "password" required><br>
+        <input name = "password"><br>
+        <p class="error-message">{{pswdError}}</p>
             
         <input type = "submit" value = "Log in">  
     </fieldset>

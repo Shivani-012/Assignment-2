@@ -277,5 +277,9 @@ footer input{
     opacity: 70%;
 }
 
+.error-message {
+    color: red;
+    margin-top: 0;
+}
 
 
