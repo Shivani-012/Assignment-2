@@ -45,6 +45,95 @@ app.get("/registration", (req,res)=>{
     });
 });
 
+app.post("/register", (req, res)=>{
+
+    let flag = 0;
+    const errors = [];
+    const values = [];
+    //const pswdRegEx = new RegExp("/^[a-z0-9]+$/");
+    const pswdRegEx = /^[a-z0-9]+$/;
+    const phoneNumRegEx = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
+
+    if(req.body.fName==""){
+        errors.push("* This field is required");
+        values.push("");
+    }
+    else {
+        errors.push("");
+        values.push(req.body.fName);
+    }
+
+    if(req.body.lName==""){
+        errors.push("* This field is required");
+        values.push("");
+    }
+    else {
+        errors.push("");
+        values.push(req.body.lName);
+    }
+
+    if(req.body.email==""){
+        errors.push("* This field is required");
+        values.push("");
+    }
+    else {
+        errors.push("");
+        values.push(req.body.email);
+    }
+
+    if(req.body.password==""){
+        errors.push("* This field is required");
+        values.push("");
+    }
+    else if (pswdRegEx.test(req.body.password) == false){
+        errors.push("* Password must only contain letters and numbers");
+        values.push("");
+    }
+    else if ((req.body.password.length < 6 || req.body.password.length > 12)){
+        errors.push("* Password must be between 6 and 12 characters");
+        values.push("");
+    }
+    else {
+        errors.push("");
+        values.push(req.body.password);
+    }
+
+    if(req.body.phoneNum!=""){
+        if (phoneNumRegEx.test(req.body.phoneNum) == false){
+            errors.push('* Invalid phone number entered');
+            errors.push("");
+        }
+        else{
+            values.push(req.body.phoneNum);
+        }
+    }
+    else {
+        errors.push("");
+        values.push("");
+    }
+
+    for (let i = 0; i < errors.length && flag == 0; i++){
+        if (errors[i] != ""){
+            res.render("signup", {
+                title : "Sign-up",
+                slogan : "Meals and grocery delivered.",
+                fNameValue : values[0],
+                fnameError : errors[0],
+                lNameValue : values[1],
+                lnameError : errors[1],
+                emailValue : values[2],
+                emailError : errors[2],
+                pswdValue : values[3],
+                pswdError : errors[3],
+                phoneNumValue : values[4],
+                phoneNumError : errors[4]
+            });
+            flag = 1;
+        }
+    }
+
+});
+
 app.get("/login", (req,res)=>{
     res.render("login", {
         title : "Log-in",
