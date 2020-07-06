@@ -2,25 +2,25 @@
 <form id="signup-form" method = "POST" name = "signup" action = "/register" class="main-form"> 
             
     <fieldset>
-        <legend>Create Account</legend>
-        <label id="fNameLabel" for="fName">First name: </label><br>
-        <input name = "fName" value={{fNameValue}}><br>
+        <legend><h2>Create Account</h2></legend>
+        <label id="fNameLabel" for="fName"><h3>First name:</h3></label>
+        <input name = "fName" value={{fNameValue}}>
         <p class="error-message">{{fnameError}}</p>
 
-        <label id="lNameLabel" for="lName">Last name: </label><br>
-        <input name = "lName" value={{lNameValue}}><br>
+        <label id="lNameLabel" for="lName"><h3>Last name:</h3></label>
+        <input name = "lName" value={{lNameValue}}>
         <p class="error-message">{{lnameError}}</p>
 
-        <label id="emailLabel" for="email">Email Address: </label><br>
-        <input name = "email" type="email" value={{emailValue}}><br>
+        <label id="emailLabel" for="email"><h3>Email Address:</h3></label>
+        <input name = "email" type="email" value={{emailValue}}>
         <p class="error-message">{{emailError}}</p>
 
-        <label id="passwordLabel" for="password">Password: </label><br>
-        <input type="password" name = "password" value={{pswdValue}}><br>
+        <label id="passwordLabel" for="password"><h3>Password:</h3></label>
+        <input type="password" name = "password" value={{pswdValue}}>
         <p class="error-message">{{pswdError}}</p>
 
-        <label id="phoneNumLabel" for="phoneNum">Phone Number (optional): </label><br>
-        <input name = "phoneNum" placeholder="123-456-7890" value={{phoneNumValue}}><br>
+        <label id="phoneNumLabel" for="phoneNum"><h3>Phone Number (optional):</h3></label>
+        <input name = "phoneNum" placeholder="123-456-7890" value={{phoneNumValue}}>
         <p class="error-message">{{phoneNumError}}</p>
             
         <input type = "submit" value = "Sign up">  

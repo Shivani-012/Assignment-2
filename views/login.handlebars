@@ -2,17 +2,17 @@
 <form id="login-form" method = "POST" action = "/login" class="main-form"> 
             
     <fieldset>
-        <legend>Customer Login</legend>
+        <legend><h2>Customer Login</h2></legend>
 
-        <label id="emailLabel" for="email">Email Address: </label><br>
-        <input name = "email" type="email"><br>
+        <label id="emailLabel" for="email"><h3>Email Address:</h3></label><br>
+        <input name = "email" type="email" value={{emailValue}}><br>
         <p class="error-message">{{emailError}}</p>
 
-        <label id="passwordLabel" for="password">Password: </label><br>
-        <input name = "password"><br>
+        <label id="passwordLabel" for="password"><h3>Password:</h3></label><br>
+        <input type="password" name = "password" value={{pswdValue}}><br>
         <p class="error-message">{{pswdError}}</p>
             
-        <input type = "submit" value = "Log in">  
+        <input type = "submit" value = "Log in">
     </fieldset>
              
 </form> 

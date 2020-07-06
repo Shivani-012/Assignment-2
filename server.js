@@ -131,6 +131,15 @@ app.post("/register", (req, res)=>{
             flag = 1;
         }
     }
+    if (flag == 0){
+
+        res.render("dashboard", {
+            title : "Dashboard",
+            slogan : "Welcome to LiveFit Foods!",
+            fName : values[0],
+            lName : values[1]
+        });
+    }
 
 });
 
@@ -145,19 +154,24 @@ app.post("/login", (req, res)=>{
 
     let flag = 0;
     const errors = [];
+    const values = [];
 
     if(req.body.email==""){
         errors.push("* This field is required");
+        values.push("");
     }
     else {
         errors.push("");
+        values.push(req.body.email);
     }
 
     if(req.body.password==""){
         errors.push("* This field is required");
+        values.push("");
     }
     else {
         errors.push("");
+        values.push(req.body.password);
     }
 
     for (let i = 0; i < errors.length && flag == 0; i++){
@@ -165,7 +179,9 @@ app.post("/login", (req, res)=>{
             res.render("login", {
                 title : "Log-in",
                 slogan : "Meals and grocery delivered.",
+                emailValue : values[0],
                 emailError : errors[0],
+                pswdValue : values[1],
                 pswdError : errors[1]
             });
             flag = 1;
